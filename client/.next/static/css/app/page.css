@@ -1,0 +1,173 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/page.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  max-width: 600px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.5rem;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.chart-section {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent-bluish);
+  margin-bottom: 1rem;
+}
+
+.chart-container {
+  flex: 1 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.chart-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to right, rgba(128, 128, 128, 0.07) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(128, 128, 128, 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.loading-text {
+  position: relative;
+  z-index: 10;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.pulse-indicator {
+  width: 12px;
+  height: 12px;
+  background-color: var(--bullish);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.panel-heading {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.signal-panel {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.signal-value {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin: 1rem 0;
+  text-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.bullish-glow { color: var(--bullish); }
+
+.signal-reason {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.technicals-panel {
+  padding: 1.5rem;
+  flex: 1 1;
+}
+
+.indicator-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.indicator-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+
+.indicator-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.indicator-val {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.text-bullish { color: var(--bullish); }
+.text-bearish { color: var(--bearish); }
+.text-blue { color: var(--accent-bluish); }
+

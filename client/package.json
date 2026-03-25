@@ -1,0 +1,16 @@
+{
+  "name": "trading-assistant-client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "next": "14.2.3",
+    "lucide-react": "^0.378.0"
+  }
+}
