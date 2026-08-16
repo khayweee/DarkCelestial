@@ -65,9 +65,15 @@ issue when one exists so merging the PR auto-closes the issue (see `AGENTS.md` â
    ...) are a good signal if one exists.
 
 2. **Determine the issue number.** If the user references a GitHub issue (`#N`, a URL, or
-   "issue N"), use that number. If they describe work that isn't yet tracked, ask whether
-   to create an issue first rather than silently skipping the number - see
-   `AGENTS.md` â†’ Issue tracking for this repo's issue conventions.
+   "issue N"), use that number. If they haven't specified one:
+   - Summarize the current conversation/work into a short description of intent.
+   - Search open GitHub issues (`gh issue list --state open --json number,title,body,labels`)
+     for the ones whose title/body most closely match that summary.
+   - Present the closest matches to the user and ask whether one should be linked to this
+     branch.
+   - If the user confirms a match, use that issue's number. If there is no good match and
+     the user confirms none exists, run `/to-gh-issue` first to create the issue, then use
+     the resulting issue number - don't silently skip the number.
 
 3. **Write the short description.** 2-4 lowercase, hyphenated words from the issue title
    or the work itself - trim filler words, don't just lowercase the whole issue title

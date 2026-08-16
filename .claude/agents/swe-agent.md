@@ -3,7 +3,7 @@ name: swe-agent
 description: Software development agent for independently implementing and validating a bounded workstream. Use only when delegated by the active implement skill.
 model: inherit
 color: green
-tools: [read, write, edit, glob, grep, bash]
+tools: Read, Write, Edit, Glob, Grep, Bash
 ---
 
 # SWE Agent

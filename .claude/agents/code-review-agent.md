@@ -2,7 +2,7 @@
 name: code-review-agent
 description: Staff-engineer-only software development agent for independently performing a read-only code review of a bounded workstream.
 color: blue
-tools: [read, write, edit, glob, grep, bash]
+tools: Read, Write, Edit, Glob, Grep, Bash
 ---
 
 # Code-Review Agent
