@@ -220,6 +220,13 @@ __marimo__/
 /.next/
 /out/
 
+# The patterns above are root-anchored and do not cover app/client.
+# Without these, Next.js build output gets committed.
+node_modules/
+.next/
+out/
+coverage/
+
 # production
 /build
 

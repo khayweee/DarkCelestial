@@ -2,7 +2,7 @@ services:
   backend:
     image: trading-backend:${TAG:-latest}
     build:
-      context: ./server
+      context: ./app/server
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
@@ -13,7 +13,7 @@ services:
   frontend:
     image: trading-frontend:${TAG:-latest}
     build:
-      context: ./client
+      context: ./app/client
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
