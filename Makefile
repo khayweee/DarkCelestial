@@ -2,7 +2,7 @@
 export TAG ?= latest
 COMPOSE ?= docker-compose
 
-.PHONY: help build start stop cleanup logs restart status dev
+.PHONY: help build start stop cleanup logs restart status dev setup_repo
 
 help:
 	@echo "======================================================================"
@@ -19,6 +19,7 @@ help:
 	@echo "  restart     Restart all services"
 	@echo "  logs        Follow log output for all services"
 	@echo "  status      Show the status of all services"
+	@echo "  setup_repo  Check that required local tooling is installed"
 	@echo "======================================================================"
 
 dev:
@@ -48,3 +49,7 @@ logs:
 
 status:
 	$(COMPOSE) ps
+
+setup_repo:
+	@echo "Checking required local tooling..."
+	./scripts/setup.sh

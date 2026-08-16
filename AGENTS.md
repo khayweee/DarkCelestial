@@ -224,12 +224,19 @@ messages, PR descriptions, and handoffs.
 
 ### Change discipline
 
+- Any agent making a code, configuration, or documentation change to this repo
+  must use the `/implement` skill to do it. Do not edit files ad hoc outside
+  that workflow.
 - Keep changes scoped to the task. No opportunistic refactors of untouched code
   in a feature change.
 - Do not edit generated files, and do not commit build output.
 - Do not disable, skip, or loosen a failing test or lint rule to make a change
   pass. Fix the cause, or stop and report the conflict.
 - Do not remove or overwrite another contributor's work in progress.
+- If the user is in Plan Mode, once an agent finishes a plan step, prompt the
+  user to ask whether they want a PRD written for it with the `/to-specs`
+  skill. If they agree, run `/to-specs`, then run `/to-gh-issue` so the spec is
+  registered as proper tracked issues.
 
 ### Commits and pull requests
 
